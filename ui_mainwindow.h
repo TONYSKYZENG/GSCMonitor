@@ -116,9 +116,9 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "GSCMonitor", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "IP", nullptr));
-        lineEditIP->setText(QCoreApplication::translate("MainWindow", "127.0.0.1", nullptr));
+        lineEditIP->setText(QCoreApplication::translate("MainWindow", "172.18.21.200", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "Port", nullptr));
         lineEditPort->setText(QCoreApplication::translate("MainWindow", "9005", nullptr));
         pushButton->setText(QCoreApplication::translate("MainWindow", "query", nullptr));

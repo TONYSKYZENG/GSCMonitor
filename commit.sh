@@ -1,4 +1,4 @@
-BRANCH=gh-pages
+BRANCH=gh-pages2
 git init
 git checkout -b $BRANCH
 git add .

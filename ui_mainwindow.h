@@ -13,7 +13,6 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -28,14 +27,10 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QGridLayout *gridLayout;
-    QLabel *label;
-    QLineEdit *lineEditIP;
-    QLabel *label_2;
-    QLineEdit *lineEditPort;
+    QLabel *labelInfo;
     QPushButton *pushButton;
     QPushButton *pushButtonPlot;
     QPushButton *pushButton_2;
-    QLabel *labelInfo;
     QCustomPlot *myPlot;
     QCustomPlot *myPlot_2;
     QMenuBar *menubar;
@@ -50,55 +45,35 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         gridLayout = new QGridLayout(centralwidget);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        label = new QLabel(centralwidget);
-        label->setObjectName(QString::fromUtf8("label"));
+        labelInfo = new QLabel(centralwidget);
+        labelInfo->setObjectName(QString::fromUtf8("labelInfo"));
 
-        gridLayout->addWidget(label, 0, 0, 1, 1);
-
-        lineEditIP = new QLineEdit(centralwidget);
-        lineEditIP->setObjectName(QString::fromUtf8("lineEditIP"));
-
-        gridLayout->addWidget(lineEditIP, 0, 1, 1, 1);
-
-        label_2 = new QLabel(centralwidget);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
-
-        gridLayout->addWidget(label_2, 0, 2, 1, 1);
-
-        lineEditPort = new QLineEdit(centralwidget);
-        lineEditPort->setObjectName(QString::fromUtf8("lineEditPort"));
-
-        gridLayout->addWidget(lineEditPort, 0, 3, 1, 1);
+        gridLayout->addWidget(labelInfo, 0, 0, 1, 1);
 
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
 
-        gridLayout->addWidget(pushButton, 0, 4, 1, 1);
+        gridLayout->addWidget(pushButton, 0, 1, 1, 1);
 
         pushButtonPlot = new QPushButton(centralwidget);
         pushButtonPlot->setObjectName(QString::fromUtf8("pushButtonPlot"));
 
-        gridLayout->addWidget(pushButtonPlot, 0, 5, 1, 1);
+        gridLayout->addWidget(pushButtonPlot, 0, 2, 1, 1);
 
         pushButton_2 = new QPushButton(centralwidget);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
 
-        gridLayout->addWidget(pushButton_2, 0, 6, 1, 1);
-
-        labelInfo = new QLabel(centralwidget);
-        labelInfo->setObjectName(QString::fromUtf8("labelInfo"));
-
-        gridLayout->addWidget(labelInfo, 1, 0, 1, 4);
+        gridLayout->addWidget(pushButton_2, 0, 3, 1, 1);
 
         myPlot = new QCustomPlot(centralwidget);
         myPlot->setObjectName(QString::fromUtf8("myPlot"));
 
-        gridLayout->addWidget(myPlot, 2, 1, 1, 6);
+        gridLayout->addWidget(myPlot, 1, 0, 1, 4);
 
         myPlot_2 = new QCustomPlot(centralwidget);
         myPlot_2->setObjectName(QString::fromUtf8("myPlot_2"));
 
-        gridLayout->addWidget(myPlot_2, 3, 1, 1, 6);
+        gridLayout->addWidget(myPlot_2, 2, 0, 1, 4);
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
@@ -117,14 +92,10 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "GSCMonitor", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "IP", nullptr));
-        lineEditIP->setText(QCoreApplication::translate("MainWindow", "172.18.21.200", nullptr));
-        label_2->setText(QCoreApplication::translate("MainWindow", "Port", nullptr));
-        lineEditPort->setText(QCoreApplication::translate("MainWindow", "9005", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "query", nullptr));
+        labelInfo->setText(QCoreApplication::translate("MainWindow", "none", nullptr));
+        pushButton->setText(QCoreApplication::translate("MainWindow", "connect", nullptr));
         pushButtonPlot->setText(QCoreApplication::translate("MainWindow", "plot", nullptr));
         pushButton_2->setText(QCoreApplication::translate("MainWindow", "testPlot", nullptr));
-        labelInfo->setText(QCoreApplication::translate("MainWindow", "none", nullptr));
     } // retranslateUi
 
 };
